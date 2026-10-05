@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub Profile Finder</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="nav">
+    <div class="logo"><span class="dot"></span> github finder</div>
+    <button id="themeBtn" class="theme-btn">🌙</button>
+  </div>
+  <div class="search-box">
+    <input id="searchInput" placeholder="Search GitHub username... e.g. torvalds, arshad78a" />
+    <button id="searchBtn">Search</button>
+  </div>
+  <div id="recent" class="recent"></div>
+</header>
+
+<main id="main">
+  <div id="empty" class="empty">
+    <h1>Explore GitHub Profiles</h1>
+    <p>Enter a username above to see profile, repos, stars, language breakdown and more.</p>
+    <div class="examples">
+      <button data-user="torvalds">torvalds</button>
+      <button data-user="arshad78a">arshad78a</button>
+      <button data-user="bradtraversy">bradtraversy</button>
+      <button data-user="github">github</button>
+    </div>
+  </div>
+  <div id="loader" class="loader hidden"><div class="spinner"></div> Fetching from GitHub API...</div>
+  <div id="error" class="error hidden"></div>
+  <div id="profile" class="hidden"></div>
+</main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
